@@ -36,6 +36,7 @@ class Article {
       `;
   }
 }
+
 const blogArticles = [
   new Article(
     'First Day of Class (C#)',
