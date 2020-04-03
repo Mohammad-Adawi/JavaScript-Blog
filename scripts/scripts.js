@@ -16,16 +16,14 @@
  */
 
 class Article {
-  constructor ( title = 'Blog Title', content = 'Lorem ipsum...' )
-  {
+  constructor(title = 'Blog Title', content = 'Lorem ipsum...') {
     this.title = title;
     this.content = content;
   }
-  output ()
-  {
+  output() {
     // TODO: Prepare output to the browser...
     // TODO: Use template literals.
-    const myArticle = document.querySelector( 'section' );
+    const myArticle = document.querySelector('section');
     myArticle.innerHTML += `
     <dl>
       <dt>Title:</dt>
@@ -62,15 +60,14 @@ const blogArticles = [
     'Time to React',
     'Our very first large JavaScript framework, how exciting! Now we can build web components and build more complex front-ends with ease... a bit of a learning curve but so useful now that we\'re getting the hang of it!'
   )
-  
+
 ];
 
 // TODO: Add a new article to the array (add "SASS" inbetween the "CSS" and "JS" articles.)
 
-blogArticles.splice(3, 0, new Article('(SASS)','SASS Content'));
+blogArticles.splice(3, 0, new Article('(SASS)', 'SASS Content'));
 
-for ( let article of blogArticles )
-{
+for (let article of blogArticles) {
   // TODO: Loop through articles and output each of them to the browser.
   article.output()
 }
